@@ -153,6 +153,10 @@ function counter(second1,minute2,hour3,day4){
         if (second == minute == hour == day) {
             const audio = document.querySelector("audio")
             audio.muted = false;    
+
+            document.getElementById('openForm').classList.remove('hidden');
+            document.getElementById('actions').classList.add('hidden');
+
             audio.play();
             const playMusic = setTimeout(() => {
                 audio.pause();
