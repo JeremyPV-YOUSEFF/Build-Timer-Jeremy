@@ -33,13 +33,6 @@ if (validSecond !== null && validMinute !== null && validHour !== null &&validDa
     document.getElementById('actions').classList.remove('hidden');
 
     counter(second,minute,hour,day)
-
-    console.log('papa')
-}else{
-    console.log(validSecond,'second',second)
-    console.log(validMinute,'minute',minute)
-    console.log(validHour,'hour',hour)
-    console.log(validDay,'day',day)
 }
 
 document.getElementById('openForm').addEventListener('click',(x) => {
@@ -156,6 +149,11 @@ function counter(second1,minute2,hour3,day4){
 
             document.getElementById('openForm').classList.remove('hidden');
             document.getElementById('actions').classList.add('hidden');
+
+            localStorage.removeItem('second');
+            localStorage.removeItem('minute');
+            localStorage.removeItem('hour');
+            localStorage.removeItem('day');
 
             audio.play();
             const playMusic = setTimeout(() => {
