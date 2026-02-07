@@ -176,6 +176,14 @@ document.getElementById('removeCounter').addEventListener('click', (x) => {
     document.getElementById('openForm').classList.remove('hidden');
     document.getElementById('actions').classList.add('hidden');
 
+    if (document.getElementById('pauseCounter').classList.contains('hidden')) {
+        document.getElementById('pauseCounter').classList.remove('hidden')
+    }
+
+    if (!document.getElementById('playCounter').classList.contains('hidden')) {
+        document.getElementById('playCounter').classList.add('hidden')
+    }
+
     localStorage.removeItem('second');
     localStorage.removeItem('minute');
     localStorage.removeItem('hour');
